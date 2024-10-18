@@ -105,7 +105,7 @@ class YandexMarketReviews:
                 "data_content": "",
                 "data_score": "",
                 "url_status": status,
-                "date_published_parsed": datetime.now(tz=timezone.utc).strftime('%Y-%m-%d %H:%M:%S')
+                "date_published_parsed": ""
             }
         self.data.append(review_data)
 
@@ -166,7 +166,7 @@ class YandexMarketReviews:
                 "data_content": review_text or "",
                 "data_score": rating if rating else "",
                 "url_status": "Data Extracted",
-                "date_published_parsed": datetime.now(tz=timezone.utc).strftime('%Y-%m-%d %H:%M:%S')
+                "date_published_parsed": published_date
             }
             # print(review_data)
             self.data.append(review_data)
