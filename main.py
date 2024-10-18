@@ -186,6 +186,7 @@ class YandexMarketReviews:
                     date = datetime.fromtimestamp(int(item["date_published"]) / 1000, tz=timezone.utc)
                     date_published = date.strftime("%Y-%m-%d %H:%M:%S")
                     item["date_published"] = date_published
+                    item["date_published_parsed"] = date_published
             
             if output_file.suffix.lower() == ".csv":
                 pd.DataFrame(self.data).to_csv(output_file, index=False)
