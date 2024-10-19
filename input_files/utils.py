@@ -2,8 +2,6 @@ import pandas as pd
 import json
 import os
 from pathlib import Path
-
-from itemadapter import ItemAdapter
 import pandas as pd
 import logging
 
