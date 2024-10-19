@@ -152,7 +152,10 @@ class YandexMarketReviews:
             author = review_item.get("author", {}).get("nickname")
             rating = review_item.get("rating")
             published_date = review_item.get("reviewDate")
-            review_text = review_item.get("advantages", "") + review_item.get("disadvantages", "") + review_item.get("commonText", "")
+            advantages = "Достоинства: " + review_item.get("advantages", "")
+            flaws = "Недостатки: " + review_item.get("disadvantages", "")
+            comment = "Комментарий: " + review_item.get("commonText", "")
+            review_text = advantages + flaws + comment
 
             review_data = {
                 "product_sku": item.get('product_sku', "N/A"),
